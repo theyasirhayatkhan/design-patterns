@@ -1,0 +1,31 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package singelton;
+/**
+ *
+ * @author theya
+ */
+class Practice{
+    private static Practice obj = new Practice();
+    private Practice(){
+        
+    };
+    public static Practice getMyInstance(){
+        return obj;
+    }
+    public void myData(){
+        System.out.println("My Name is Yasir Hayat Khan");
+    }
+}
+public class Checking{
+    public static void main(String args[]){
+        Practice obj = Practice.getMyInstance();
+        obj.myData();
+        Practice obj1 = Practice.getMyInstance();
+         obj.myData();
+        
+    }
+}
